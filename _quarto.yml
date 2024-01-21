@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Knowledge Mining"
+
+format:
+  html:
+    theme: cyborg
+    mainfont: Open Sans
+    fontsize: 1.5rem
+    monofont: playfair
+    css: styles.css
+    toc: true
+editor: visual
+

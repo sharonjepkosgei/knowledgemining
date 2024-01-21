@@ -1,0 +1,46 @@
+---
+title: "Knowledge Mining"
+image: image.jpg
+resources: Data Visualization Paper.pdf
+about: 
+  id: hero-heading
+  template: jolla
+  image-width: 15em
+  image-shape: round
+  
+  links: 
+    - text: Final Project
+      icon: cast
+      href: https://sharonjepkosgei.github.io/data_files/Group_finalproject_alt.html
+    - text: Final Paper
+      icon: file-text
+      href: Data Visualization Paper.pdf
+    - text: Project Proposal
+      icon: file-slides
+      href: https://slides.com/sharon_j/desk
+---
+
+::: {#hero-heading}
+:::
+
+## Assignments
+
+-   [Assignment 1](posts/6323_01.qmd)
+
+-   [Assignment 2](posts/6323_02.qmd)
+
+-   [Assignment 3](posts/6323_03.qmd)
+
+-   [Assignment 4](posts/6323_04.qmd)
+
+-   [Assignment 5](posts/6323_05.qmd)
+
+-   [Assignment 6](posts/6323_06.qmd)
+
+-   [Assignment 7](posts/6323_07.qmd)
+
+-   [Assignment 8](posts/6323_08.qmd)
+
+-   [Assignment 9](posts/6323_09.qmd)
+
+-   [Assignment 10](posts/6356_10.qmd)
