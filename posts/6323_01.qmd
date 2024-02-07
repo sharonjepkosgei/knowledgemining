@@ -1,0 +1,9 @@
+---
+title: "Assignment 1"
+---
+
+-   [Lab01](Lab01.qmd)
+
+-   [Lab02](Lab02.qmd)
+
+-   [Assignment](assignment1.qmd)

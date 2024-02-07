@@ -1,0 +1,104 @@
+---
+title: "Assignment 1"
+format: html
+editor: visual
+---
+
+## Questions
+
+### EDA
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code"
+#| warning: false
+#| message: false
+#| error: false
+library(haven)
+library (ggplot2)
+TEDS_2016 <- read_dta("C:/Users/sxj210076/Downloads/TEDS_2016.dta")
+hist(TEDS_2016$age, col = "indianred4")
+hist(TEDS_2016$income, col = "steelblue4")
+ggplot(TEDS_2016) + 
+  geom_bar(mapping = aes(x = edu),fill = "indianred4")
+summary(TEDS_2016$age)
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code"
+#| warning: false
+#| message: false
+#| error: false
+# Generate a frequency table of the "Tondu" variable} 
+frequency_table <- table(TEDS_2016$Tondu) 
+print(frequency_table)
+```
+
+### Position on Unification and Independence
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code"
+#| warning: false
+#| message: false
+#| error: false
+library (ggplot2)
+library(dplyr)
+
+# Convert Tondu variable to factor with corresponding labels
+TEDS_2016$Tondu <- factor(TEDS_2016$Tondu, labels = 
+                            c("Unification now", "Status quo, unif. in future", 
+                              "Status quo, decide later", "Status quo forever",
+                              "Status quo, indep. in future", "Independence now", 
+                              "No response"), exclude = NA)
+ggplot(TEDS_2016, aes(x = Tondu)) +
+  geom_bar(fill = "darkslategrey") +
+  labs(title = "Position on Unification and Independence") +
+  coord_flip()
+
+ggplot(data = TEDS_2016) +
+  geom_boxplot(mapping = aes(x = reorder(Tondu, age, FUN = median), y = age), fill = "indianred4") +
+  coord_flip()
+
+ggplot(TEDS_2016, aes(x = Tondu, fill = factor(Taiwanese))) +
+  geom_bar() +
+  scale_fill_manual(values = c("0" = "steelblue4", "1" = "indianred4")) + coord_flip()
+ggplot(TEDS_2016, aes(x = Tondu, fill = factor(DPP))) +
+  geom_bar() +
+  scale_fill_manual(values = c("0" = "steelblue4", "1" = "indianred4")) + coord_flip()
+ggplot(TEDS_2016, aes(x = Tondu, fill = factor(female))) +
+  geom_bar() +
+  scale_fill_manual(values = c("0" = "steelblue4", "1" = "indianred4")) + coord_flip()
+```
+
+### Relationship between Vote for DPP Candidate Tsai Ing-wen & Other Variables
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code"
+#| warning: false
+#| message: false
+#| error: false
+TEDS_2016 <- read_dta("C:/Users/sxj210076/Downloads/TEDS_2016.dta")
+TEDS_2016$votetsai <- factor(TEDS_2016$votetsai, labels = 
+                               c("No", "Yes"))
+TEDS_2016 <- na.omit(TEDS_2016)
+ggplot(TEDS_2016, aes(x = votetsai)) +
+  geom_bar(fill = "darkslategrey") +
+  labs(title = "Vote for DPP Candidate Tsai Ing-wen")
+ggplot(data = TEDS_2016) +
+  geom_boxplot(mapping = aes(x = votetsai, y = age), fill = "indianred4") +
+  coord_flip()
+
+ggplot(data = TEDS_2016) +
+  geom_boxplot(mapping = aes(x = votetsai, y = income), fill = "indianred4") +
+  coord_flip()
+ggplot(TEDS_2016, aes(x = votetsai, fill = factor(Taiwanese))) +
+  geom_bar() +
+  scale_fill_manual(values = c("0" = "steelblue4", "1" = "indianred4"))
+ggplot(TEDS_2016, aes(x = edu, fill = factor(votetsai))) +
+  geom_bar() +
+  scale_fill_manual(values = c("No" = "steelblue4", "Yes" = "indianred4"))
+
+```
