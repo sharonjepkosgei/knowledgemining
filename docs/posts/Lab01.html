@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="My name">
+<meta name="author" content="Sharon">
 
 <title>Knowledge Mining - EPPS 6323: Lab01 R programming basics I</title>
 <style>
@@ -69,10 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,30 +98,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body>
+<body class="fullcontent">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#r-programming-basic-commands" id="toc-r-programming-basic-commands" class="nav-link active" data-scroll-target="#r-programming-basic-commands">R Programming Basic Commands</a>
-  <ul class="collapse">
-  <li><a href="#create-object-using-the-assignment-operator--" id="toc-create-object-using-the-assignment-operator--" class="nav-link" data-scroll-target="#create-object-using-the-assignment-operator--">Create object using the assignment operator (&lt;-, =)</a></li>
-  <li><a href="#using-function" id="toc-using-function" class="nav-link" data-scroll-target="#using-function">Using function</a></li>
-  <li><a href="#using---operators" id="toc-using---operators" class="nav-link" data-scroll-target="#using---operators">Using +, -, *, /,^ operators</a></li>
-  <li><a href="#matrix-operations" id="toc-matrix-operations" class="nav-link" data-scroll-target="#matrix-operations">Matrix operations</a></li>
-  <li><a href="#simple-descriptive-statistics-base" id="toc-simple-descriptive-statistics-base" class="nav-link" data-scroll-target="#simple-descriptive-statistics-base">Simple descriptive statistics (base)</a></li>
-  <li><a href="#visualization-using-r-graphics-without-packages" id="toc-visualization-using-r-graphics-without-packages" class="nav-link" data-scroll-target="#visualization-using-r-graphics-without-packages">Visualization using R Graphics (without packages)</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -137,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>My name </p>
+             <p>Sharon </p>
           </div>
   </div>
     
@@ -243,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x,y) <span class="co"># Correlation of x and y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9961121</code></pre>
+<pre><code>[1] 0.9934444</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1303</span>) <span class="co"># Set the seed for Random Number Generator (RNG) to generate values that are reproducible.</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
