@@ -7,7 +7,7 @@ website:
 
 format:
   html:
-    theme: cyborg
+    theme: flat
     mainfont: Open Sans
     fontsize: 1.5rem
     monofont: playfair
